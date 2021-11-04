@@ -6,6 +6,7 @@
 // at your option. All files in the project carrying such
 // notice may not be copied, modified, or distributed except
 // according to those terms.
+#![feature(static_nobundle)]
 
 use std::ffi::{CStr, CString};
 use std::os::raw::c_char;

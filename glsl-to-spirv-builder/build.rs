@@ -1,3 +1,5 @@
+#![feature(static_nobundle)]
+
 use std::path::Path;
 
 fn main() {
@@ -36,7 +38,7 @@ fn main() {
         println!("cargo:rustc-link-lib=c++_shared");
     }
     if target.ends_with("-pc-windows-gnu") {
-        println!("cargo:rustc-link-lib=dylib=stdc++");
+        println!("cargo:rustc-link-lib=static-nobundle=stdc++");
     }
 
     if target.contains("darwin") {
